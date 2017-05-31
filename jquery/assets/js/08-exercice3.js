@@ -8,10 +8,10 @@ function validateEmail(email){
     	return true;
     }
 };
-
+var Contacts = [];
 // -- Initialisation de jQuery
 $(function() {
-    var Contacts = [];
+    
     $("#contact").on("submit", function(event) {
     event.preventDefault();
 
@@ -29,6 +29,7 @@ $(function() {
         //-- Fonction ajouterContact(Contact) : Ajouter un Contact dans le tableau de Contacts, mettre à jour le tableau HTML, réinitialiser le formulaire et afficher une notification.
         function ajouterContact(Contact) {
             Contacts.push(Contact);
+           
         };
 
         // -- Fonction RéinitialisationDuFormulaire() : Après l'ajout d'un contact, on remet le formulaire à 0 !
@@ -46,10 +47,11 @@ $(function() {
             for(i=0; i<Contacts.length; i++) {
                 var inscrits = Contacts[i];
 
-                if(email.val() === inscrits.email) {
-                    alert("Cet email à déjà été enregistré");
-                } else {
-                    ajouterContact(Contact);
+                if(inscrits.email === Contact.email) {
+                    return true;
+                } 
+                if( i == Contacts.length - 1) {
+                    return false;
                 };
             };
         };
@@ -93,10 +95,16 @@ $(function() {
             };
 
             PresenceContact(Contact);
-            ajouterContact(Contact);
+            if (!PresenceContact(Contact)) {
+                ajouterContact(Contact);
+                afficheUneNotification();
+                 $(".aucuncontact").remove();
+                 $("tbody").append("<tr><td>" + Contact.nom + "</td><td>" + Contact.prenom + "</td><td>" + Contact.email + "</td><td>" + Contact.tel + "</td></tr>");
+                reinitialisationDuFormulaire();
+            } else {
+                alert("Contact déja présent");
+            }
             console.log(Contacts);
-            afficheUneNotification();
-            reinitialisationDuFormulaire();
         };
     });
 });
