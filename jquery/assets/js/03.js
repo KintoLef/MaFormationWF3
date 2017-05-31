@@ -1,5 +1,5 @@
 /*-----------------------------------
-    LE CHAINAGE DE METHODE JQUERY
+    LE CHAINAGE DE METHODE jQUERY
 ------------------------------------*/
 
 $(function() {
