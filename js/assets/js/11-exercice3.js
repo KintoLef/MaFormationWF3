@@ -12,7 +12,7 @@ var motdepasse = prompt("Veuillez indiquer votre motdepasse", "xxxxxxxx");
 
 for(var i=0; i<BaseDeDonnees.length; i++) {
     var login = BaseDeDonnees[i];
-
+    
     if(mail === login.email && motdepasse === login.mdp) {
         document.write("Bonjour " + login.prenom + " " + login.nom);
         break;

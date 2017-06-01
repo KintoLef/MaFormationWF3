@@ -8,7 +8,9 @@ function validateEmail(email){
     	return true;
     }
 };
+
 var Contacts = [];
+
 // -- Initialisation de jQuery
 $(function() {
     
@@ -29,12 +31,15 @@ $(function() {
         //-- Fonction ajouterContact(Contact) : Ajouter un Contact dans le tableau de Contacts, mettre à jour le tableau HTML, réinitialiser le formulaire et afficher une notification.
         function ajouterContact(Contact) {
             Contacts.push(Contact);
-           
+            $(".aucuncontact").remove();
+            $("tbody").append("<tr><td>" + Contact.nom + "</td><td>" + Contact.prenom + "</td><td>" + Contact.email + "</td><td>" + Contact.tel + "</td></tr>"); 
+            afficheUneNotification();
+            reinitialisationDuFormulaire();     
         };
 
         // -- Fonction RéinitialisationDuFormulaire() : Après l'ajout d'un contact, on remet le formulaire à 0 !
         function reinitialisationDuFormulaire() {
-            $("#contact")[0].reset();
+            $("#contact")[0].reset(); // -- Ici on réinitialise le formulaire
         };
 
         // -- Affichage d'une notification
@@ -47,10 +52,10 @@ $(function() {
             for(i=0; i<Contacts.length; i++) {
                 var inscrits = Contacts[i];
 
-                if(inscrits.email === Contact.email) {
+                if(inscrits.email === Contact.email) { // -- Ici la fonction va checker toutes les valeurs des champs email et si elle trouve à email identique à celui rentré par l'utilisateur elle va retourner vrai
                     return true;
                 } 
-                if( i == Contacts.length - 1) {
+                if( i == Contacts.length - 1) { //-- Ici on créer une condition qui dit qu'arriver à la dernière ligne du tableau si la fonction n'a rien trouver elle retourne la valeur false.
                     return false;
                 };
             };
@@ -59,6 +64,7 @@ $(function() {
         // -- Suppression des différentes erreurs
         $("#contact .has-error").removeClass("has-error");
         $("#contact .text-danger").remove();
+        $("#contact .alert-danger").remove();
 
         // -- Je passe à la vérification de chaque champs
 
@@ -87,7 +93,7 @@ $(function() {
             };
 
         if($(this).find(".has-error"). length == 0) {
-            let Contact = {
+            let Contact = { // -- On crée un objet qui servira à alimenter le tableau Contacts
                 "nom"   : nom.val(),
                 "prenom": prenom.val(),
                 "email" : email.val(),
@@ -95,14 +101,12 @@ $(function() {
             };
 
             PresenceContact(Contact);
-            if (!PresenceContact(Contact)) {
+            if (!PresenceContact(Contact)) { // -- Si la fonction retourne false (avec !) alors on execute les autres fonctions pour ajouter le contact, faire la notification, et réinitialiser le formulaire
                 ajouterContact(Contact);
-                afficheUneNotification();
-                 $(".aucuncontact").remove();
-                 $("tbody").append("<tr><td>" + Contact.nom + "</td><td>" + Contact.prenom + "</td><td>" + Contact.email + "</td><td>" + Contact.tel + "</td></tr>");
-                reinitialisationDuFormulaire();
-            } else {
-                alert("Contact déja présent");
+            } else { // -- Si la fonction retourne vrai alors on affiche un message d'alerte
+                $("#contact").prepend("<div class='alert alert-danger'><p>Ce contact existe déjà !</p></div>");
+                $(".alert-contact").css("display", "none");
+                reinitialisationDuFormulaire()
             }
             console.log(Contacts);
         };
