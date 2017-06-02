@@ -1,0 +1,245 @@
+body{
+	background: url(../img/fond.png) repeat-x;
+	margin-top: 5px;
+	font-family: sans-serif;
+}
+p{
+	font-size: 13px;
+}
+#conteneur{
+	background: white;
+	width: 1000px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.87);
+	-moz-box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.87);
+	box-shadow: 0px 6px 11px -2px rgba(0,0,0,0.87);
+}
+/* ***** HEADER ***** */
+.header{
+	min-height: 80px;
+}
+.header a{
+	color: black;
+}
+.logo{
+	margin: 10px 0 0 15px;
+	float: left;
+}
+.enseigne{
+	float: left;
+	margin: 5px 0 10px 20px;
+	width: 38%;
+}
+h1{
+	font-weight: bold;
+	font-size: 40px;
+	font-style: italic;	
+}
+.enseigne p{
+	color: #F43C80;
+	font-style: italic;	
+	padding: 0 0 0 15px;
+}
+.aide{
+	float: left;
+}
+.aide p{
+	color: #52D1F6;
+	font-size: 26px;
+}
+figure{
+	position: absolute;
+}
+figcaption p.tel{
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+	bottom: 27px;
+	left: 42px;
+}
+p.horaire{
+	margin: 27px 0 0 0;
+	color: #CCC;
+	font-size: 14px;
+	font-style: italic; 
+}
+.compte{
+	float: right;
+	background: #5CAAFF;
+	min-height: 70px;
+	width: 250px;
+}
+.compte img{
+	float: left;
+}
+.compte p{
+	color: white;
+	font-size: 15px;
+	text-align: center;
+}
+.panier{
+	height: 50px;
+	width: 250px;
+	line-height: 50px;
+	
+}
+.compte hr{
+	color: white;
+	margin: 0;
+}
+/* ***** MENU ***** */
+nav{
+	min-height: 30px;
+}
+nav a{
+	float: left;
+	background: #5CAAFF;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	width: 16.6667%;
+	line-height: 30px;
+	text-decoration: none;
+}
+nav a:hover{
+	background: #F43C80;
+}
+/* ***** SECTION ***** */
+section{
+	min-height: 600px;
+}
+section div{
+	float: left;
+}
+.pay{
+	width: 18%;
+	height: 120px;
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+h2{
+	color: #52D1F6;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.pay p{
+	margin: 15px 0;
+}
+.pay .card{
+	position: absolute;
+	bottom: 4px;
+	left: 5px;
+}
+.bio{
+	width: 58%;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-left: 1px solid;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.bio p{
+	margin: 15px 0 0;
+	font-size: 14px;
+}
+.service{
+	width: 19%;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-left: 1px solid;
+	padding-left: 9px;
+	height: 120px;
+}
+.service img{
+	float: left;
+}
+.livraison, .echange{
+	height: 50px;
+	text-align: left;
+	line-height: 33px;
+	padding-left: 15px;
+}
+.flex{
+	width: 100%;
+	margin-top: 40px;
+	min-height: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.bonplan, .coeur, .plaisir{
+	width: 300px;
+	min-height: 155px;
+	margin-bottom: 30px;
+	position: relative;
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	-webkit-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: -1px 10px 15px 0px rgba(0,0,0,0.75);
+}
+h3{
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #DDD;
+	padding: 5px 0;
+	border-radius: 25px 25px 0px 0px;
+	-moz-border-radius: 25px 25px 0px 0px;
+	-webkit-border-radius: 25px 25px 0px 0px;
+}
+.robe, .talons, .chemise{
+	margin: 10px 10px 0;
+	font-size: 15px;
+}
+.robe img, .talons img, .chemise img{
+	float: left;
+	margin-right: 15px;
+}
+.bonplan a, .coeur a, .plaisir a{
+	position: absolute;
+	bottom: 2px;
+	right: 25px;
+	color: dodgerblue;
+	text-decoration: underline;
+	font-size: 15px;
+	font-weight: bold;
+}	
+.bloc{
+	width: 175px;
+}
+/* ***** FOOTER ***** */
+footer{
+	min-height: 30px;
+	background: #5CAAFF;
+	color: white;
+}
+footer div{
+	width: 80%;
+	text-align: center;
+	position: relative;
+	top: 5px;
+	left: 100px;
+}
+ul{
+	list-style-type: none;
+}
+li{
+    float: left;
+	margin-right: 3px;
+}
+li a{
+    text-align: center;
+	font-size: 13px;
+	text-decoration: none;
+}
+li a:visited{
+	color: white;
+}
+
+.clear{
+	clear: both;
+}

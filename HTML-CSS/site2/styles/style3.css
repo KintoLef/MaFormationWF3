@@ -1,0 +1,115 @@
+body{
+	color: #c0BAB6;
+	font-size: 13px;
+	height: 100%;
+}
+.contain{
+	font-family: georgia;
+	width: 960px;
+	margin: 0 auto;
+}
+.clear{
+	clear: both;
+}
+/* ***** HEADER ***** */
+header{
+	background: #333;
+	min-height: 130px;
+	margin-bottom: 30px;
+}
+.enseigne{
+	padding-top: 25px;
+	float: left;
+}
+.enseigne a h1{
+	font-size: 36px;
+	color: #c0BAB6;
+}
+.nav{
+	float: right;
+	width: 50%;
+	padding-top: 40px;
+}
+.nav a{
+	padding: 10px;
+	float: left;
+	background: #111;
+	font-size: 18px;
+	text-align: center;
+	color: #c0BAB6;
+	text-decoration: none;
+}
+.nav a:hover{
+	background: white;
+}/* ***** SECTION ***** */
+section{
+	min-height: 700px;
+}
+section .contain{
+	border-bottom: 1px solid #c0BAB6;
+}
+.formulaire, .adresse{
+	float: left;
+	min-height: 500px;
+	width: 50%;
+	box-sizing: border-box;
+	padding-bottom: 50px;
+}
+h2{
+	font-weight: bold;
+	font-size: 18px;
+}
+.formulaire h2{
+	margin:7px 0;
+}
+label, input{
+	display: block;
+	width: 92%;
+}
+label{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 5px 0;
+}
+input{
+	height: 30px;
+	border:1px solid #c0BAB6;
+	color: #c0BAB6;
+	font-family: georgia;
+	font-size: 14px;
+}
+textarea{
+	resize: vertical;
+	border:1px solid #c0BAB6;
+	color: #c0BAB6;
+	width: 92%;
+	font-family: georgia;
+	font-size: 14px;
+}
+.envoyer input{
+	background: #09F;
+	color: white;
+	margin-top: 5px;
+	width: 447px;
+	padding: 0;
+}
+.adresse{
+	line-height: 1.7;
+}
+iframe{
+	margin-top: 20px;
+}
+/* ***** FOOTER ***** */
+footer{
+	background: #333;
+	min-height: 100px;
+}
+footer div{
+	padding-top: 10px;
+}
+.copyright{
+	float: left;
+}
+.templates{
+	float: right;
+}

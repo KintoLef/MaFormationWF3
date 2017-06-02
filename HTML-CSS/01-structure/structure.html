@@ -1,0 +1,96 @@
+﻿<!-- Le DOCTYPE est la déclaration du type de document, qui indique au navigateur dans quelle version de html la page à été écrite.
+Cela indique aux anciens navigateurs de désactiver leur mode de rendu pour éviter les erreurs en cas de balises non-reconnues.
+Ici le doctype au HTML5 (uniquement). -->
+<!DOCTYPE html>
+<!-- <html> encadre tout le contenu de la page, il est parfois appelé l'élément racine. -->
+<html>
+	<!-- <head> (en-tête) contient les informations générales (métadonnées) sur le document. Son titre, ses mots-clés, ou des liens vers des scripts ou des feuilles de style -->
+	<head>
+		<!-- Character sets définit le jeu de carctères utilisé pour le document et indique que c'est UTF-8 (regroupant l'ensemble des caractères connus utilisés dans les différents langages humains) -->
+		<meta charset="UTF-8" />
+		<!-- <title> définit le titre de la page. Il apparaît dans l'onglet du navigateur et est utilisé par Google ou encore les marques pages. -->
+		<title>Ma première page</title>
+		<!-- <meta /> représente différents types de métadonnées. L'attribut name est associé à une valeur contenue dans l'attribut content. -->
+		<!-- description contient un résumé conscit et pertinent du contenu de la page -->
+		<meta name="description" content="Voici ici une description de mon site" />
+		<!-- keywords contient une liste de mots-clés pertinents et en rapport avec le contenu de ma page (mots séparés par des virgules) -->
+		<meta name="keywords" content="mot-clé1, mot-clé2, etc" />
+		<!-- author renseigne sur le nom de l'auteur du document -->
+		<meta name="author" content="My Self"/>
+		<!-- <link /> définit la relation entre le document courant et une ressource externe (ici une feuille de style)
+		L'attribut rel renseigne sur le type de relation, href indique le chemin vers la ressource externe -->
+		<link rel="stylesheet" href="structure.css" />
+		<!-- <style> contient des informations de mise en forme pour un document ou une partie de document. Par défaut les instructions sont écrites en CSS -->
+		<style>
+			section{font-weight: bold;}
+		</style>
+	</head>
+	<!-- <body> (corps) représente le contenu principal du document HTML, ce qui est affiché à l'écran. C'est à l'intérieur du corps que se trouve la majeure partie du code -->
+	<body>
+		<!-- <header> (zone du haut) représente un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre(H1), mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche -->
+		<header>
+			Haut
+		</header>
+		<!-- <nav> (zone de menu) représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est section destinée à la navigation dans un document -->
+		<nav>
+			Menu
+		</nav>
+		<!-- <section> (zone de contenu) représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement par un titre (h2) -->
+		<section>
+			<h1> Mon titre H1 </h1>
+			<!-- <div> (division du document) est un conteneur générique permettant d'organiser le contenu sans représenter rien de particulier. Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié -->
+			<div>
+				Section -> div
+			</div>
+			<!-- L'attribut style contient les déclarations CSS utlisées pour mettre en forme l'élément. Le rôle de l'attribut style consiste à permettre une mise en forme rapide, notamment pour des tests -->
+			<div style="color: blue;">
+				Section -> div
+			</div>
+			<!-- <span> est un conteneur générique pour les contenus textuels. Il ne représente rien de particulier, il doit être uniquement utilisé lorsqu'aucun autre élément sémantique n'est approprié -->
+			<span>
+				Section -> span
+			</span>
+			<span>
+				Section -> span
+			</span>
+		</section>
+		<!-- <article> (zone de contenu texte) représente du contenu autonome sur une page. Ceci peut être un message sur un forum, une parution sur un blog ou autre élément de contenu indépendant. Le contenu est prévu comme pouvant être distribué ou utilisé indépendamment (par exemple dans un flux de syndication) -->
+		<article>
+			Article
+		</article>
+		<!-- <aside> (aparté) est une section de la page dont le contenu est indirectement lié à ce qui l'entoure et qui ne pourrait pas être séparés de cet environnement. De tels sections sont souvent représentées par des colonnes annexes ou des encadrés. C'est souvent l'utilisation assignée aux colonnes latérales lorsque la résolution le permet -->
+		<aside>
+			Aside
+		</aside>
+		<!-- <footer> (zone du bas) représente le pied de page ou de la section. Il contient habituellement des informations sur l'auteur de la section, les données relatives aux droits d'auteur (copyright), ou les liens vers d'autres documents en relation (mentions légales, plan du site, CGU, CGV...)
+		-->
+		<footer>
+			Bas de Page
+		</footer>
+	</body>
+</html>
+
+<!--
+L'hypertext markup language (html) est un langage à balise utilisé pour la création de contenu et la structuration sémantique des pages web.
+
+-Création et hiérarchisation du contenu dans une structure d'éléments(balises) imbriqués.
+
+-Chaque élément contenant définit la valeur sémantique (la signification) du contenu aux yeux du navigateur (ex: la balise <title>)
+
+Un élément, par exemple header, commence à la balise ouvrante (ou balise d'ouverture) et se termine après la balise fermante (ou balise de fermeture)	<header>....</header>.
+
+Les balises indiquent la nature du contenu qu'elles encadrent. Elles disent: "ceci est le titre de la page", "ceci est un header", ceci est un paragraphe de texte" etc. Certains éléments sont des balises ne proposant pas de contenu texte ou autres, on parle d'éléments vides ou de balises orphelines (ex balise <meta />)
+
+Une balise ouvrante peut contenir des informations additionnelles: les attributs. Certaines balises demandent un attribut pour fonctionner, d'autres attributs sont optionnels.
+
+Les attributs consistent en deux parties:
+-un nom d'attribut le définissant suivi du signe "=".
+-une valeur d'attribut entre guillemets.
+-->
+
+
+
+
+
+
+

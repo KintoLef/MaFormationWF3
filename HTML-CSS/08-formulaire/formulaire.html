@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Formulaire</title>
+		<link rel="stylesheet" href="formulaire.css" />
+	</head>
+	<body>
+<!-- <form> pour la création d'un formulaire, nécessite plusieurs attributs : method (post / get), action (redirige la personne après la résolution du formulaire)-->
+		<form method="post" action="#" >
+			<label for="idpseudo">Pseudo</label>
+			<input type="text" id="idpseudo" name="pseudo" required placeholder="votre pseudo"/>
+			
+			<label for="idmdp">Mot de Passe</label>
+			<input type="password" id="idmdp" name="mdp" placeholder="votre mot de passe"/>
+			
+			<label for="idemail">Email</label>
+			<input type="email" id="idemail" name="email" />
+			
+			<label for="idavatar">Avatar</label>
+			<input type="file" id="idavatar" name="avatar" />
+			
+			<label for="idpays">Pays</label>
+			<select id="idpays" name="pays"> <!-- "select" permer d'intégrer une liste de choix pré-sélectionner -->
+				<option selected></option> <!-- "selected" représente la valeur par défaut lors de l'affichage du formulaire -->
+				<optgroup label="Europe">
+					<option value="fr">France</option>
+					<option value="es">Espagne</option>
+					<option value="ita">Italie</option>
+					<option value="ger">Allemagne</option>
+					<option value="ang">Angleterre</option>
+				</optgroup>	
+				<optgroup label="Asie">
+					<option value="viet">Vietnam</option>
+					<option value="jap">Japon</option>
+					<option value="chi">Chine</option>
+					<option value="ko">Corée du Sud</option>
+					<option value="indo">Indonésie</option>
+				</optgroup>					
+			</select>
+			
+			<label for="checkbox">Quels sont vos fruits préférés</label>
+			<input type="checkbox" name="choix" value="Orange"/><span>Orange</span>
+			<input type="checkbox" name="choix" value="Pomme"/><span>Pomme</span>
+			<input type="checkbox" name="choix" value="Banane"/><span>Banane</span>
+			
+			<label for="civilite">Civilité</label>
+			<input type="radio" id="femme" name="civilite" checked value="f"/><label class="radiolabel" for="femme">Femme</label>
+			<input type="radio" id="homme" name="civilite" value="h"/><label class="radiolabel" for="homme">Homme</label>
+			
+			<label for="idville">Ville</label>
+			<input type="text" id="idville" name="ville" list="france" />
+			<datalist id="france">
+				<option>Paris</option>
+				<option>Marseille</option>
+				<option>Toulouse</option>
+				<option>Rambouillet</option>
+				<option>Nice</option>
+				<option>Lille</option>
+				<option>Bordeaux</option>
+			</datalist>
+			
+			<label for="idadresse">Adresse</label>
+			<textarea id="idadresse" name="adresse" rows="5" cols="25"></textarea>
+			
+<!--		<label for="idnaissance">Date de Naissance</label>
+			<input type="date" name="naissance" id="idnaissance" />
+		Cette balise (input type="date") ne fonctionne que sur Chrome -->
+		
+			<input type="hidden" id="idcache" name="cache" />
+			<!-- Cet input va servir pour la base de données via le php -->
+			
+			<div class="submit">
+				<input type="submit" name="inscription" />
+				<input type="reset" name="efface" value="Recommencer" />
+			</div>
+			
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

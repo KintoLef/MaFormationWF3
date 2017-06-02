@@ -1,0 +1,54 @@
+/* Nous cassons (reset) l'effet d'héritage pour toutes les balises suceptible d'être concernées */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+/*
+En faisant un reset, on ne nous impose rien. Nous remmetton à plat tous les héritages, rien ne nous empêche ensuite de définir nos propres styles et d'être maître de nos choix.
+*/
+h1{
+	/* En ajoutant une bordure, je peux constater l'étendue du contenu de l'élément */
+	border: 1px solid green; /* bordure/ type contour/couleur*/
+	font-size: 20px; /* taille de la police */
+	font-weight: bold; /* texte en gras */
+	text-align: center; /* alignement horizontal du texte */
+	padding: 30px 20px 10px 5px; /* marges intérieures */
+	margin: 30px 20px 10px 5px; /* marges extérieures */
+}
+p{
+	border: 1px dotted;
+	display: inline;
+}
+/* en ajoutant une bordure à div, nous constatons que l'élément prend toute la place en largeur, on dit qu'il est display block */
+div{
+	border: 1px dashed;
+}
+/* en ajoutant une bordure au span, nous constatons que l'élément ne prend que la place dont il a besoin, on dit qu'il est display inline */
+span{
+	border: 1px solid;
+	display: block;
+}
+
+/* Certains éléments sont block, d'autres inline */
+
+/*
+MARGIN/PADDING
+	margin/padding: 10px 9px 8px 7px
+	4 valeurs -> 10px en haut, 9px à droite, 8px en bas, 7px à gauche
+	margin/padding: 10px 9px 8px
+	3 valeurs -> 10px en haut, 9px à gauche et à droite, 8px en bas
+	margin/padding: 10px 5px
+	2 valeurs -> 10px en haut et en bas, 5px à gauche et à droite
+	margin/padding: 10px
+	1 valeurs -> 10px en haut en bas à gauche et à droite
+	
+	moyen mnémotechnique une horloge commence à minuit (en haut), les aiguilles passent ensuite à droite, puis en bas, et enfin à gauche.
+*/
+
+

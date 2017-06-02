@@ -1,0 +1,37 @@
+#conteneur{
+	border: 2px solid;
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	font-size: 1.2vw;
+}
+header{
+	background: #F6523F;
+	height: 15vh;
+}
+nav{
+	background: #665533;
+	height: 5vh;
+}
+section{
+	margin: 2%;
+}
+footer{
+	background: #32F65F;
+	height: 5vh;
+}
+.a, .b, .c, .d{
+	float: left;
+	width: 50%;
+	height: 28vh;
+}
+.a{background: #336699;}
+.b{background: #767676;}
+.c{background: #FDA500;}
+.d{background: #AA2355;}
+.clear{
+	clear: both;
+}
+p{
+	margin: 0;
+}

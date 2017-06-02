@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ma Video</title>
+	</head>
+	<body>
+		<h1>CIC.ogv</h1>
+		<video controls preload poster="cic.gif">
+			<source src="cic.ogv" type="video/ogg"/>
+		</video>
+		<h1>CIC.webm</h1>
+		<video controls preload poster="cic.gif">
+			<source src="cic.webm" />
+		</video>
+		<h1>CIC.mp4</h1>
+		<video controls preload poster="cic.gif">
+			<source src="cic.mp4" />
+		</video>
+		
+		<h1>CIC 3 sources</h1> <!-- Ici c'est le navigateur qui va choisir le format le plus adéquat -->
+		<video controls preload poster="cic.gif">
+			<source src="cic.ogv" type="video/ogg"/>
+			<source src="cic.webm" />
+			<source src="cic.mp4" />
+		</video>
+	</body>
+</html>

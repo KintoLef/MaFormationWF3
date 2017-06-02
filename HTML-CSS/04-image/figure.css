@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+figure{
+	width: 300px;
+	border: 3px solid #C0C0C0;
+	position: relative;
+	overflow: hidden; /* "overflow" fait référence à tout ce qui dépasse de l'élément, en l'occurance "figure" (visible, hidden, scroll...) */
+}
+figure img{
+	display: block;
+}
+figcaption{
+	position: absolute;
+	background: rgba(0,0,0,0.75);
+	bottom: -30%;
+	width: 300px;
+	color: #FFF;
+	text-align: center;
+	padding: 5px 0;
+	transition: 0.6s /* choix de la transition (changement de propriété "bottom") en 0.6s */
+}
+figure:hover figcaption{
+	bottom: 0;
+}
+figure figcaption a{
+	color: #FFF;
+	text-decoration: none
+}

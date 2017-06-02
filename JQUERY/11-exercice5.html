@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 5</title>
+    <style>
+        main {
+            width: 900px;
+            height: auto;
+            margin: 0 auto;
+        }
+        section {
+            width: 100%;
+            height: auto;
+            min-height: 200px;
+            margin-bottom: 10px;
+            background-image: linear-gradient(0deg, #CCC, #FFF);
+            border: 1px solid #CCC;
+        }
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            text-align: center;
+            color: #000;
+        }
+        article{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            padding: 20px;
+        }
+        mark{
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+        <section>
+            <header>
+                <h3>Titre de Mon Article</h3>
+            </header>
+            <article>
+                contenu de mon article
+            </article>
+        </section>
+    </main>
+
+    <!-- CONSIGNE : Avec l'aide de jQuery, vous devrez :
+
+        1. Définir une structure HTML5 et CSS3 pour afficher des articles.
+
+        2. Afficher une liste d'articles à partir de l'API:
+        https://jsonplaceholder.typicode.com/posts
+
+        3. BONUS : Afficher uniquement les 10 premiers articles.
+
+        4. BONUS : Mettre en place Mark.js.io afin de surligner des mots dans les différents articles à l'aide d'un champs input.
+
+    -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+    <!-- Mark.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.10.1/jquery.mark.min.js"></script>
+
+    <script>
+    $(function() {
+        $.getJSON("https://jsonplaceholder.typicode.com/posts/?callback=", function(articles) {
+            console.log(articles);
+            for(i=0; i<articles.length && i<=10; i++){
+                $("h3").eq(i).replaceWith("<h3>" + articles[i].title + "</h3>");
+                $("article").eq(i).replaceWith("<article>" + articles[i].body + "</article>");
+            };
+        });
+
+        //-- On va utiiser le plugins Mark.js pour surligner des mots via un input
+
+        $("<input type='text' id='keyword'>").css({"margin": "10px"}).prependTo("main"); // -- Création de la balise input
+        
+        $("#keyword").on("input", function() {
+            var keyword = $("#keyword").val();
+            $("section").unmark({
+                done: function() {
+                    $("section").mark(keyword);
+                }
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>

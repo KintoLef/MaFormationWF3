@@ -1,0 +1,65 @@
+*{ /* Il est préférable d'utiliser un fichier reset plutôt que le sélecteur universelle */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* box-sizing: border-box; Définit une "box" qui comprend les bordures */
+}
+body{
+	color: white;
+}
+#conteneur{
+	width: 1000px;
+	margin: 0 auto;
+	color: white;
+	border: 1px solid;
+}
+header{
+	background: #4A409A;
+	min-height: 80px; /* Ici on a définit une hauteur minimale (elle peut s'agrandir en fonction du contenu) */
+}
+nav{
+	min-height: 30px;
+	background: yellow;
+	color: #4A409A;	
+}
+section{
+	background: #89297C;
+	text-align: left;
+}
+.a, .b, .c, .d, .e, .f{
+	float: left;
+	min-height: 200px;
+}
+.a{
+	background: red;
+	width: 25%;
+}
+.b{
+	background: green;
+	width: 50%;
+}
+.c{
+	background: blue;
+	width: 25%;
+}
+.d{
+	background: orange;
+	width: 100%;
+}
+.e{
+	background: black;
+	width: 50%;
+}
+.f{
+	background: purple;
+	width: 50%;
+}
+.clear{
+	clear: both;
+}
+
+footer{
+	min-height: 70px;
+	background: #124578;
+}

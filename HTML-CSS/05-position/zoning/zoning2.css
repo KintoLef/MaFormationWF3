@@ -1,0 +1,50 @@
+*{ /* Il est préférable d'utiliser un fichier reset plutôt que le sélecteur universelle */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* box-sizing: border-box; Définit une "box" qui comprend les bordures */
+}
+body{
+	color: white;
+}
+#conteneur{
+	width: 1000px;
+	margin: 0 auto;
+	background: #40A497;
+	text-align: center;
+}
+header{
+	background: #4A409A;
+	min-height: 80px; /* Ici on a définit une hauteur minimale (elle peut s'agrandir en fonction du contenu) */
+}
+nav{
+	min-height: 30px;
+	background: yellow;
+	color: #4A409A;	
+}
+section{
+	background: #89297C;
+	margin: 20px;
+	text-align: left;
+}
+.a, .b{
+	float: left;
+	min-height: 500px;
+}
+.a{
+	background: red;
+	width: 240px; /* width: 25% */
+}
+.b{
+	background: blue;
+	width: 720px; /* width: 75% */
+}
+.clear{
+	clear: both;
+/* La classe clear comporte la propriété qui permet de nettoyer le flux de float, qu'il soit left ou right (valeur both) */	
+}
+footer{
+	min-height: 70px;
+	background: #124578;
+}

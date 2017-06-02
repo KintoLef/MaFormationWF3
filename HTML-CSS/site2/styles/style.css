@@ -1,0 +1,103 @@
+body{
+	color: #c0BAB6;
+	font-size: 13px;
+	height: 100%;
+}
+.contain{
+	font-family: georgia;
+	width: 960px;
+	margin: 0 auto;
+}
+.clear{
+	clear: both;
+}
+/* ***** HEADER ***** */
+header{
+	background: #333;
+	min-height: 130px;
+}
+.enseigne{
+	padding-top: 25px;
+	float: left;
+}
+.enseigne a h1{
+	font-size: 36px;
+	color: #c0BAB6;
+}
+.nav{
+	float: right;
+	width: 50%;
+	padding-top: 40px;
+}
+.nav a{
+	padding: 10px;
+	float: left;
+	background: #111;
+	font-size: 18px;
+	text-align: center;
+	color: #c0BAB6;
+	text-decoration: none;
+}
+.nav a:hover{
+	background: white;
+}
+/* ***** SECTION ***** */
+section{
+	min-height: 620px;
+}
+.bandeau{
+	margin: 30px 0 40px;
+}
+.info{
+	border-bottom: 1px solid #C0BAB6;
+}
+.info1, .info2{
+	float: left;
+	width: 232.5px;
+	min-height: 100px;
+	margin-bottom: 25px;
+}
+.info1{
+	padding-right: 10px;
+	
+}
+.img{
+	float: left;
+	padding-right: 8px;
+}
+h2{
+	width: 100%;
+	padding-top: 6px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+}
+.info1 p, .info2 p{
+	padding: 7px 0;
+	line-height: 1.4;
+}
+.readmore{
+	width: 100%;
+	text-align: right;
+}
+.readmore a{
+	color: orange;
+}
+.readmore a img{
+	padding-bottom: 1px;
+}
+/* ***** FOOTER ***** */
+footer{
+	background: #333;
+	min-height: 180px;
+}
+footer div{
+	padding-top: 10px;
+}
+.copyright{
+	float: left;
+}
+.templates{
+	float: right;
+}

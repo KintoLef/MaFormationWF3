@@ -1,0 +1,80 @@
+*{ /* Il est préférable d'utiliser un fichier reset plutôt que le sélecteur universelle */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* box-sizing: border-box; Définit une "box" qui comprend les bordures */
+}
+body{
+	color: white;
+}
+#conteneur{
+	width: 1000px;
+	margin: 0 auto;
+	background: #40A497;
+	text-align: center;
+}
+header{
+	background: #4A409A;
+	min-height: 80px; /* Ici on a définit une hauteur minimale (elle peut s'agrandir en fonction du contenu) */
+}
+nav{
+	min-height: 30px;
+	background: yellow;
+	color: #4A409A;	
+}
+section{
+	background: #89297C;
+	text-align: left;
+}
+.a, .b, .c, .d{
+	float: left;
+	width: 500px;
+	min-height: 250px;
+}
+.a{
+	background: red;
+}
+.b{
+	background: green;
+}
+.c{
+	background: blue;
+}
+.d{
+	background: orange;
+}
+.clear{
+	clear: both;
+}
+footer{
+	min-height: 70px;
+	background: #124578;
+}
+@media (max-width: 1050px){
+	#conteneur{
+		width: 750px;
+		font-size: 1.2em;
+	}
+	.a, .b, .c, .d{
+		width: 375px;
+	}
+}
+@media (max-width: 780px){
+	#conteneur{
+		width: 550px;
+		font-size: 1em;
+	}
+	.a, .b, .c, .d{
+		width: 275px;
+	}
+}
+@media (max-width: 580px){
+	#conteneur{
+		width: 100%;
+		font-size: 1.4em;
+	}
+	.a, .b, .c, .d{
+		width: 100%;
+	}
+}

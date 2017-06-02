@@ -1,0 +1,14 @@
+label{
+	display: block;
+	width: 150px;
+	margin-top: 20px;
+}
+.submit{
+	margin-top: 20px;
+}
+.radiolabel{
+	display: inline;
+}
+textarea{
+	resize: vertical; /* horizontal, vertical, none, both */
+}

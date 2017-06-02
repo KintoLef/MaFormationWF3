@@ -1,0 +1,16 @@
+p{
+	margin: 0;
+}
+.blue{
+	color: blue;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	right: 150px;
+}
+.relative{
+	width: 500px;
+	height: 500px;
+	border: 1px solid;
+	position: relative;
+}

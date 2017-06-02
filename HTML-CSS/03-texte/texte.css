@@ -1,0 +1,106 @@
+@font-face { /* utilisation d'une police css3 à l'aide d'une url */
+	font-family: "Cabin";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Cabin Regular"), local("Cabin-Regular"), url("https://themes.googleusercontent.com/static/fonts/cabin/v4/JEgmtEDzc-IH8jBshQXrYA.woff") format("woff");
+}
+@font-face { /* utilisation d'une police css3  à l'aide de fichier */
+    font-family: 'folksbold';
+    src: url('police/Folks-Bold-webfont.eot');
+    src: url('police/Folks-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('police/Folks-Bold-webfont.woff') format('woff'),
+         url('police/Folks-Bold-webfont.ttf') format('truetype'),
+         url('police/Folks-Bold-webfont.svg#folksbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "Cabin";
+	line-height: 140%;
+	background-image: url("image/cuisine.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.container{
+	width: 650px; /* taille du "contenu" (sans les marges) */
+	/* border: 1px solid; */
+	margin: 0 auto; /* "auto" permet de centrer le contenu */
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+	margin: 0;
+	font-family: "Ubuntu";
+}
+h1{
+	font-size: 50px; /* taille de la police */
+	color: dodgerblue; /* couleur de texte */
+	letter-spacing: 3px; /* espacement entre les lettres */
+	text-transform: uppercase; /* casse de la police - capitalize / uppercase / lowercase */
+	text-align: center; /* alignement horizontal */
+}
+h2{
+	font-size: 25px;
+	color: #666;
+	text-align: center;
+	margin: 25px 90px 40px;
+	/* text-decoration: underline;  Ici soulignement (underline / overline / line-through */
+	border-bottom: 3px solid #666; /* Autre façon de faire un soulignement */
+	padding-bottom: 10px;
+}
+h4{
+	font-size: 18px;
+	color: orange;
+}
+h4 span{
+	color: #666;
+	font-weight: normal;
+	margin-left: 10px; /* utilisé dans ce cas-là pour mettre un espace */
+}
+h4 i{
+	margin-right: 5px;
+	color: green;
+}
+ul{
+	padding-left: 20px;
+}
+ol{
+	padding-left: 30px;
+}
+ul li{
+	list-style-type: none /* disc, circle, square, none*/
+}
+fieldset legend{
+	font-size: 18px;
+	font-weight: bold;
+	color: orange;
+	padding: 0 10px;
+}
+fieldset p{
+	font-size: 15px;
+	text-align: justify;
+	line-height: 140%;
+	font-style: italic;
+}
+summary{
+	color: red;
+	width: 175px;
+	transition: 0.5s;
+	padding-bottom: 10px;
+}
+summary:hover{
+	color: blue;
+	cursor: pointer;
+}
+img{
+	float: left;
+	padding: 0 50px 30px 0;
+	width: 245px;
+}
+
+

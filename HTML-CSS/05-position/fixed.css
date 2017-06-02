@@ -1,0 +1,15 @@
+#contenu{
+	border: 2px solid blue;
+	padding: 20px;
+	text-align: justify;
+	margin: 30px 0 0 0;
+}
+nav{
+	background: black;
+	color: white;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}

@@ -1,0 +1,144 @@
+/* ***** GENERAL ***** */
+body{
+	background: url("../img/background.png"); /* image de fond en repeat auto pour faire un effet papier peint */
+	font-family: Arial, sans-serif;
+	margin: 0;
+	font-size: 15.5px;
+	color: #333;
+}
+#contain{
+	margin: 0 auto 50px;
+	width: 1310px;
+	min-height: 800px;
+	border-radius: 10px;
+	background: #FFF;
+	-webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75); /* box shadow généré par cssmatic.com*/
+	-moz-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.clear{
+	clear: both; /* pour annuler les flux de float */
+}
+
+/* ***** HEADER ***** */
+header{
+	min-height: 50px;
+	width: 100%;
+	background: #C55394;
+}
+.logo{
+	margin: 0;
+	font-family: 'Courgette', cursive; /* police généré via le site google fonts (voir le head dans index.html */
+	font-size: 25px;
+	font-weight: normal;
+	padding: 15px 15px;	
+	float: left;
+}
+.logo a{
+	text-decoration: none;
+	color: #FFF;
+}
+nav{
+	float: right;
+	width: 360px;
+}
+nav a{
+	float: left;
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 25px 12px;
+}
+nav a:hover{
+	background: #EB43A3; /* change la couleur de fond pendant le survol */
+}
+/* ***** TITRE ***** */
+.titre{
+	margin: 30px auto 0;
+	text-align: center;
+	background: url("../img/rainbow.png") top center /cover no-repeat;
+	width: 400px;
+}
+.titre h1{
+	color: #C55394;
+	font-family: 'Courgette', cursive;
+	padding: 55px 0 25px;
+	margin: 0;
+}
+/* ***** SECTION ***** */
+#principe, #licorne, #contact{
+	padding: 30px 25px 10px 15px;
+}
+i{
+	padding-right: 7px;
+}
+/* *** Principe *** */
+h2{
+	color: #EB43A3;
+	font-family: 'Courgette', cursive;
+	font-weight: normal;
+}
+/* *** Licorne *** */
+figure{
+	margin: 0;
+	float: left;
+	padding: 10px 8px 10px 9px;
+	position: relative;
+	overflow: hidden; /* on cache les éléments qui sont en-dehors de la balise figure*/
+}
+figcaption{
+	position: absolute; /* permet de placer l'élément en fonction de son parent (figure) mis en relative */
+	background: rgba(0,0,0,0.75); /* application d'un effet de transparence (de 0.75) */
+	bottom: -20%; /* ici on décale la figcaption de -20% par rapport au bas de l'élément figure */
+	width: 300px;
+	color: #FFF;
+	text-align: center;
+	padding: 7px 0;
+}
+figure:hover figcaption{
+	bottom: 0; /* on redéplace l'élément de 0px par rapport au bas de figure afin qu'il apparaisse en "légende" lors du survol */
+	transform: scale(1.2);
+}
+figure:hover img{
+	transform: scale(1.2); /* utilisation de la propriété transform pour faire l'effet de zoom sans redimensionner les images */
+}
+/* *** Contact *** */
+.map, .news{
+	float: left;
+}
+iframe{	
+	padding: 0 0 40px 10px;
+}
+.news{
+	padding-left: 20px;
+}
+.map h3, .news h3{
+	color: #EB43A3;
+	font-family: 'Courgette', cursive;
+}
+#email{
+	border: 1px solid #B1B1B1;
+	color: #B1B1B1;
+	width: 175px;
+	margin: 10px 0;
+	padding: 3px 0px 3px 10px; 
+}
+.submit input{
+	color: #FFF;
+	background: #C55394;
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+/* ***** FOOTER ***** */
+footer{
+	background: #E577B5;
+	text-align: right;
+	color: #FFF;
+}
+footer div{
+	padding: 20px 10px;
+	font-size: 11px;
+}

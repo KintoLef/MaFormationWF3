@@ -1,0 +1,51 @@
+.conteneur{
+	border: 1px solid #000;
+	height: 1200px;
+}
+#flex{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	/* flex-direction définit le sens de distribution des éléments enfants du conteneur flex 
+	- row (valeur par défaut): axe principal horizontal, axe secondaire vertical
+	- column: axe principal vertical, axe secondaire horizontal
+	- row-reverse: même chose que row mais dans le sens inverse (de droite à gauche)
+	- column-reverse: même chose que column mais dans le sens inverse (de bas en haut)
+	*/
+	justify-content: space-around;
+	/*
+	C'est l'alignement dans l'axe principal (flex-start, flex-end, center, space-between, space-around)
+	*/
+	align-items: flex-start;
+	/*
+	C'est l'alignement dans l'axe secondaire (flex-start, center, flex-end)
+	*/
+	flex-wrap: wrap;
+	/*
+	Choisir le type de gestion de retour à la ligne (no-wrap (par défaut), wrap, wrap-reverse)
+	*/
+}
+.item1{
+	background: green;
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+	order: 2;
+	flex: 1;
+}
+.item2{
+	background: orange;
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+	align-self: center; /* Exception de positionnement pour un élément donné sur l'axe secondaire */
+	order: 3;
+	flex: 2;
+}
+.item3{
+	background: red;
+	height: 300px;
+	width: 300px;
+	margin: 20px;
+	flex: 3;
+}

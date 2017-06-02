@@ -1,0 +1,44 @@
+#conteneur{
+	width: 960px;
+	margin: 0 auto;
+}
+header{
+	background: green;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+div{
+	float: left;
+}
+.cote{
+	width: 20%;
+	height: 500px;
+	text-align: center;
+	line-height: 500px;
+	background: lightblue;
+}
+.section{
+	width: 60%;
+	height: 500px;
+	text-align: center;
+}
+.z1, .z2, .z3, .z4, .z5{
+	background: lightgreen;
+	height: 400px;
+	width: 20%;
+	border: 1px solid #FFF;
+	box-sizing: border-box;
+	line-height: 400px;
+}
+.zb{
+	background: yellow;
+	height: 100px;
+	width: 100%;
+	border: 1px solid #FFF;
+	box-sizing: border-box;
+	line-height: 100px;
+}
+.clear{
+	clear: both;
+}

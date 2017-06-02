@@ -1,0 +1,25 @@
+/* ************ SETUP ************ */
+body{
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+.conteneur{
+	width: 92%;
+	margin: 0 auto;
+}
+/* ************ STRUCTURE ************ */
+header{
+	background: #686A6A;
+	width: 100%;
+}
+
+/* ************ MEDIA QUERIES ************ */
+@media (min-width: 768px){
+	
+}
+@media (min-width: 980px){
+	.conteneur{
+		max-width: 1200px;
+	}
+}

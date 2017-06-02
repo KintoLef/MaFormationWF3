@@ -1,0 +1,15 @@
+table{
+	/* border: 1px solid; */
+	border-collapse: collapse; /* permet de revenir à une bordure "normal" */
+	width: 700px;
+	margin: 0 auto;
+}
+th{
+	background: #F40C80; 
+}
+.pays{
+	background: skyblue;
+}
+td{
+	background: lightgrey;
+}

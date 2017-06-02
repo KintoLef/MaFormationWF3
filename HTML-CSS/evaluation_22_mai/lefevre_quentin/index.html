@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>My Unicorn</title>
+		<meta name="description" content="Venez voir nos fabuleuses licornes" />
+		<meta name="keywords" content="licornes, unicorns, ..." />
+		<meta name="author" content="Quentin Lefevre"/>
+		<link rel="stylesheet" href="styles/index.css" />
+		<link rel="stylesheet" href="styles/font-awesome.css" /> <!-- ici on fait appelle à la police de font-awesome pour utliser des icones telles que les étoiles -->
+		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> <!--ici on fait appelle à la police de Courgette via le site google fonts  -->
+	</head>
+	<body>
+		<header>
+			<div class="logo"><a href="index.html">MyUnicorn</a></div>
+			<nav>
+				<a href="#principe">Le Principe</a> <!-- ancrage des différentes parties du site via les id--> 
+				<a href="#licorne">Nos Licornes</a>
+				<a href="#contact">Nous Trouver</a>
+			</nav>
+			<div class="clear"></div>
+		</header>
+		<div class="titre">
+			<h1>Un jour, une licorne</h1>
+		</div>
+		<section>
+			<div id="contain">
+				<div id="principe"> <!-- id pour les ancres du site (voir la nav) -->
+					<h2><i class="fa fa-star-o" aria-hidden="true"></i>Le principe</h2>
+<!-- la balise <i> fait appelle à une icone (ici de class fa fa-star-o) que l'on a préalablement chargé via font-awesome-->
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dictum dapibus ante, eu aliquam ante euismod eleifend. Ut malesuada augue ut luctus pellentesque. Aenean id varius ipsum. Nunc malesuada ex ut ipsum interdum vestibulum. Integer facilisis finibus orci, sit amet pretium diam placerat vitae. Nunc auctor tincidunt mollis. Nullam quis turpis sed lorem elementum semper eget semper risus. In nec mauris aliquam, congue metus euismod, cursus leo. Vivamus laoreet commodo leo, ut cursus justo blandit in. Aenean pretium mi a auctor pulvinar. Mauris sodales sollicitudin sodales. Sed mollis sed lectus id facilisis. Quisque pharetra a purus eget porttitor. Proin rhoncus risus non mauris iaculis sodales. Pellentesque euismod dui erat, non sodales ipsum sollicitudin sed.
+					<br/><br/>	
+					Donec nisi eros, luctus id pretium eget, consequat elementum risus. Fusce eleifend lacinia orci eu iaculis. Vestibulum vestibulum justo quis commodo congue. Aliquam purus leo, dictum in nisl at, pellentesque bibendum mi. Nulla convallis mi eget nisl convallis dictum. Vestibulum a massa lacus. Aenean quis enim diam.</p>
+				</div>
+				<div id="licorne">
+					<h2><i class="fa fa-star-o" aria-hidden="true"></i>Nos licornes</h2>
+					<div>
+						<figure>
+							<img src="img/unicorns/photo1.jpg" alt="licorne 1"/>
+							<figcaption>Lulu Confetty</figcaption>
+						</figure>
+						<figure>
+							<img src="img/unicorns/photo2.jpg" alt="licorne 1"/>
+							<figcaption>Lapillon Magik</figcaption>
+						</figure>
+						<figure>
+							<img src="img/unicorns/photo3.jpg" alt="licorne 1"/>
+							<figcaption>El Ninjacorn</figcaption>
+						</figure>
+						<figure>
+							<img src="img/unicorns/photo4.jpg" alt="licorne 1"/>
+							<figcaption>Sweety Candy</figcaption>
+						</figure>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div id="contact">
+					<h2><i class="fa fa-star-o" aria-hidden="true"></i>Nous trouver</h2>
+					<div class="map">
+					<!-- utilisation de la balise iframe pour intégrer une map via google maps -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2207.524819303851!2d2.356023417249467!3d48.85431598692095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2bbd365849898f2!2sWebforce3!5e0!3m2!1sfr!2sfr!4v1495446990961" width="740" height="500" style="border:0" allowfullscreen></iframe>
+					</div>
+					<div class="news">
+						<h3>Notre élevage de licornes est situé au :</h3>
+						18 Rue Geoffroy l'Asnier<br/>
+						75004 Paris<br/>
+						01.23.45.67.89<br/><br/><br/>
+
+						<h3>Newsletter</h3>
+						Abonnez-vous simplement à notre newsletter mensuelle !
+						<form method="post" action="newsletter.php">
+<!-- form permet la création du formulaire. La method post permet de cacher les infos contenu dans le formulaire et l'action défini ce qu'il se passe après la résolution du formulaire (ici on renvoi sur la page newsletter.php) -->
+							<label for="email"></label>
+							<input type="email" id="email" name="email" required placeholder="votre@email.fr"/>
+							<div class="submit">
+								<input type="submit" name="valider" value="Valider" />
+							</div>
+						</form>
+					</div>
+					<div class="clear"></div>
+				</div>			
+			</div>
+		</section>
+		<footer>
+			<div>2016 © Webforce3</div>
+		</footer>
+	</body>
+</html>
