@@ -22,6 +22,7 @@ $(function() {
         var prenom  = $("#prenom");
         var email   = $("#email");
         var tel     = $("#tel");
+        var message = $("#message");
 
 
         /* -------------------------------
@@ -90,6 +91,12 @@ $(function() {
             if(tel.val() == "" || $.isNumeric(tel.val()) == false) {
                 tel.parent().addClass("has-error");
                 $("<p class='text-danger'>Vérifier votre numéro de téléphone</p>").appendTo(tel.parent());
+            };
+
+            // -- 5. Vérification du Message
+            if(message.val().length < 15) {
+                message.parent().addClass("has-error");
+                $("<p class='text-danger'>Le champ doit contenir un minimum de 15 caractères !</p>").appendTo(message.parent());
             };
 
         if($(this).find(".has-error"). length == 0) {
