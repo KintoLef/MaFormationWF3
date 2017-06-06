@@ -134,3 +134,55 @@ footer p{
     color: #FFF;
     margin-bottom: 0;
 }
+
+/*==========  Non-Mobile First Method  ==========*/
+   /* Large Devices, Wide Screens */
+   @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops
+        S'applique à partir de 992px */
+    @media only screen and (max-width : 992px) {
+        .navbar-apple ul li {
+            margin: 0;
+        }
+        #mobile ul li {
+            width: calc( 100% / 4 );
+        }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+        #mobile ul li {
+            width: calc( 100% / 3 );
+        }
+        #iPhone7 {
+            padding: 40px 0;
+        }
+        #iPhone7 img {
+            margin: 0 auto !important;
+        }
+        #formulaire .form-group:nth-child(2) div:first-child {
+            padding-right: 15px;
+        }
+
+        #formulaire .form-group:nth-child(2) div:nth-child(2) {
+            padding-left: 15px;
+        }
+        #formulaire input[type=email] {
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+        #mobile ul li {
+            width: calc( 100% / 2 );
+        }
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+
+    }
