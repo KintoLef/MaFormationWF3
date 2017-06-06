@@ -1,0 +1,136 @@
+body{
+    background: #000;
+}
+
+/* Menu de Navigation */
+.navbar-apple{
+    background-color: #1E1E1E;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.navbar-apple ul{
+    text-align: center;
+}
+
+.navbar-apple ul li{
+    margin: 0 12px;
+}
+
+.navbar-apple ul li a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.navbar-brand{
+    color: #FFF !important;
+}
+
+    /* On centre la navbar */
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+/* Section Mobile */
+
+#mobile{
+    background: #141414;
+}
+
+#mobile ul{
+    padding: 10px 0;
+}
+#mobile ul li{
+    padding: 0 15px;
+}
+
+/* Section Projecteur */
+
+#projecteur{
+    text-align: center;
+    padding-top: 20px;
+    color: #FFF;
+}
+
+#projecteur h2{
+    font-size: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+
+#projecteur h3{
+    font-size: 60px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+}
+
+#projecteur p{
+    color: #CCC
+}
+
+/* Section iPhone 7 */
+
+#iPhone7{
+    background-image: linear-gradient(#FFF 0%, #EEE 100%);
+    padding-top: 40px;
+}
+
+#iPhone7 article{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#iPhone7 article h3{
+    font-size: 36px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    color: #303236;
+    margin: 40px 0;
+}
+
+#iPhone7 article p{
+    margin: 40px 0;
+}
+
+/* Section Formulaire */
+
+#formulaire{
+    padding: 40px;
+}
+
+#formulaire h3{
+    font-size: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#formulaire .form-group:nth-child(2) > div:first-child{
+    padding-right: 7.5px;
+}
+
+#formulaire .form-group:nth-child(2) > div:nth-child(2){
+    padding-left: 7.5px;
+}
+
+/* Footer */
+footer{
+    background-color: #1E1E1E;
+    padding: 5px 0;
+}
+
+footer p{
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 0;
+}
