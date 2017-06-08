@@ -42,6 +42,12 @@ export class AppComponent {
     this.contactActif = contactchoisiparuser;
     console.log(this.contactActif);
   }
+
+  // -- Si unContactEstCree j'appelle ma fonction ajouterContactDansListe
+  ajouterContactDansListe(event) {
+    console.log(event);
+    this.Contacts.push(event.contact);
+  }
 }
 
   

@@ -19,6 +19,9 @@
       </ul>
 
     </div> <!-- /div if Contacts -->
+    
+    <!-- J'ecoute ici l'évènement unContactEstCree, lorsqu'il est émit, j'appel la fonction ajouterContactDansMaListe -->
+    <app-ajouter-contact (unContactEstCree)="ajouterContactDansListe($event)"></app-ajouter-contact>
 
   </div> <!-- /div .col-sm-4 -->
 
