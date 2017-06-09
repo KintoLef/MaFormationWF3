@@ -9,6 +9,9 @@ $(function() {
         var select   = $("#choixchat");
         var message  = $("#message");
 
+        $("#adopt-form .has-error").removeClass("has-error");
+        $("#adopt-form .text-danger").remove();
+
         // -- Je passe à la vérification de chaque champs
 
             // -- 1. Vérification du champ Choix du Chat
