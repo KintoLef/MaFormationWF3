@@ -1,0 +1,99 @@
+body{
+    
+}
+
+/* ****NAVBAR LOGO**** */
+.navbar-cats {
+    background-color: #061339;
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.navbar-cats .logo{
+    color: #FFF;
+    font-family: "Merienda", "cursive";
+    font-size: 24px;
+}
+
+/* ****HEADER**** */
+header {
+    background-image: url('../img/background.jpg')
+}
+header h1{
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    margin: 70px 0;
+    font-family: "Merienda", "cursive";
+    font-size: 32px;
+    color: #FFF;
+}
+
+/* ****SECTION FORM/SLIDER**** */
+.form-slider{
+    background: #F1F1F1;
+    padding: 40px 0;
+}
+
+ /* Slider */
+.form-slider h3{
+    text-shadow: 2px 2px 2px black;
+    font-family: "Merienda", "cursive";
+}
+
+ /* Form */
+.form-slider h4{
+    color: #2F4073;
+    font-family: "Merienda", "cursive";    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#adopt-form {
+    background: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+label{
+    color: #333333;
+}
+
+/* ****SECTION TETE DE CHAT**** */
+.tetechat{
+    background: #DDDDDD;
+}
+
+.tetechat h2{
+    color: #2F4073;
+    font-family: "Merienda", "cursive";
+    margin-bottom: 20px;
+}
+
+.tetechat p{
+    font-size: 15px;
+}
+
+.tetechatpochoir{
+   background: #7885A5;
+   padding: 0;
+}
+
+.tetechat:hover .tetechatpochoir{
+    background: #061339;
+}
+
+/* ****FOOTER**** */
+footer{
+    color: #FFF;
+    background: #061339;
+    min-height: 30px;
+}
+
+footer p{
+    float: right;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding-right: 5px;
+}
