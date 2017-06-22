@@ -661,5 +661,30 @@ class Etudiant
 {
     public $prenom = 'Marie';
     // public est un mot clé permettant de préciser que l'élément sera accessible directement sur l'objet. Sinon il faudrait passer par des méthodes permettant de récupérer cette information ou de la modifier (il existe aussi protected / private / static).
-    
+    public $age = 25;
+    public function pays()
+    {
+        return 'France';
+    }
 }
+
+// un objet est un conteneur symbolique qui possède sa propre existence et incorpore des informations (propriétés) et des fonctions (méthodes)
+
+// pour instancier un objet:
+$mon_objet_1 = new Etudiant(); // new est un mot clé obligatoire permettant d'instancier un objet depuis une classe
+$mon_objet_2 = new Etudiant();
+
+echo '<pre>'; var_dump($mon_objet_1); echo '</pre>';
+echo '<pre>'; var_dump($mon_objet_2); echo '</pre>';
+
+// pour voir les méthodes de l'objet
+echo '<pre>'; var_dump(get_class_methods($mon_objet_1)); echo '</pre>';
+
+// pour récupérer une propriété de l'objet
+echo $mon_objet_1 -> prenom . '<br />';
+
+// pour récupérer une méthode de l'objet
+echo $mon_objet_1 -> pays() . '<br />';
+
+$mon_objet_1 -> prenom = 'Pierre';
+echo $mon_objet_1 -> prenom . '<br />';
