@@ -593,3 +593,73 @@ $couleur['r']   = 'rouge';
 $couleur['bl']  = 'blanc';
 echo '<pre>'; var_dump($couleur); echo '</pre>';
 echo $couleur['b'] . '<br />';
+
+// Pour connaître la taille d'un tableau (combien d'éléments dans le tableau array)
+echo 'Taille du tableau couleur: ' . count($couleur);
+echo 'Taille du tableau couleur: ' . sizeof($couleur);
+
+echo '<h1>Tableaux Array multidimensionnels</h1>';
+// nous parlons de tableaux array multidimensionnels lorsqu'un tableau est lui même contenu dans un autre tableau.
+
+$tableau_etudiant = array(0 => array('pseudo' => 'Marie', 'nom' => 'Durand', 'email' => 'marie@email.fr'), 1 => array('pseudo' => 'Luc', 'nom' => 'Dupond', 'email' => 'luc@email.fr'), 3 => array('pseudo' => 'Jean', 'nom' => 'Imbert', 'email' => 'jean@email.fr'));
+
+$tableau_etudiant = array(
+                        0 => array(
+                            'pseudo' => 'Marie',
+                            'nom' => 'Durand',
+                            'email' => 'marie@email.fr'),
+                        1 => array(
+                            'pseudo' => 'Luc',
+                            'nom' => 'Dupond',
+                            'email' => 'luc@email.fr'), 
+                        2 => array(
+                            'pseudo' => 'Jean',
+                            'nom' => 'Imbert', 
+                            'email' => 'jean@email.fr'),
+                        );
+
+echo '<pre>'; print_r($tableau_etudiant); echo '</pre>';
+
+echo $tableau_etudiant[1]['email'] . '<br />'; // nous rentrons d'abord à l'indice 1 du premier niveau puis à l'indice 'email' du deuxième niveau
+
+$tableau_etudiant_lenght = sizeof($tableau_etudiant);
+
+for($i=0; $i<$tableau_etudiant_lenght; $i++)
+{
+    // afficher les emails du deuxième niveau
+    echo $tableau_etudiant[$i]['email'] . '<br />';
+}
+
+echo '<hr />';
+
+// avec un foreach
+foreach($tableau_etudiant AS $valeur)
+{
+    echo $valeur['email'] . '<br />';
+}
+echo '<hr />';
+// double foreach pour afficher toutes les informations
+foreach($tableau_etudiant AS $valeur)
+{
+    foreach($valeur AS $val)
+    {
+        echo $val . '<br />';
+    }
+    echo '<hr />';
+}
+
+
+echo '<h1>Les Objets</h1>';
+// un objet est un autre type de données. Un peu à la manière d'un array, il permet de conserver des valeurs mais cela va plus loin puisqu'on peut également avoir des fonctions dans un objet.
+// une information dans un objet s'appelle une propriété ou attribut
+// une fonction dans un objet s'appelle une méthode
+
+// un objet est toujours issu d'une classe (son modèle de construction)
+
+// pour déclarer une classe
+class Etudiant
+{
+    public $prenom = 'Marie';
+    // public est un mot clé permettant de préciser que l'élément sera accessible directement sur l'objet. Sinon il faudrait passer par des méthodes permettant de récupérer cette information ou de la modifier (il existe aussi protected / private / static).
+    
+}

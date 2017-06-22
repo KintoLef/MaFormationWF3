@@ -1,0 +1,9 @@
+body{
+	padding-top: 70px;
+}
+.border{
+	border: 1px solid;
+}
+.navbar-default{
+	background-color: #DDD;
+}
