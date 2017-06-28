@@ -46,13 +46,21 @@
 
     if(isset($_POST['pseudo']) && isset($_POST['message']))
     {
-        $pseudo = $_POST['pseudo'];
-        $message = $_POST['message'];
+        // htmlentities() permet d'éviter l'injection de code (sql, css, xss etc ...) cette fonction transforme les caractères tels que < > & ... en entites html, cela permet d'avoir un code source propre et de bloquer les injections.
+        // Le deuxième argument ENT_QUOTES permet la prise en charge également des " et des '.
+        $pseudo = htmlentities($_POST['pseudo'], ENT_QUOTES);
+        $message = htmlentities($_POST['message'], ENT_QUOTES);
         
-        $insert_comment_bdd = $pdo->prepare("INSERT INTO commentaire (id_commentaire, pseudo, message, date) VALUES (NULL, :pseudo, :message, CURRENT_TIMESTAMP)");
-        $insert_comment_bdd->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
-        $insert_comment_bdd->bindParam(':message', $message, PDO::PARAM_STR);
-        $insert_comment_bdd->execute();
+        if(!empty($pseudo) && !empty($message))
+        {
+            $insert_comment_bdd = $pdo->prepare("INSERT INTO commentaire (id_commentaire, pseudo, message, date) VALUES (NULL, :pseudo, :message, CURRENT_TIMESTAMP)");
+            $insert_comment_bdd->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+            $insert_comment_bdd->bindParam(':message', $message, PDO::PARAM_STR);
+            $insert_comment_bdd->execute();
+        }
+        else {
+            echo '<h1 style="background-color: red; color: white; padding: 10px;">Veuillez vérifier votre pseudo et/ou votre message !!!</h1>';
+        }
     }
     ?>
 
