@@ -9,13 +9,13 @@
     <meta name="author" content="Moi">
 
     <title>Ma Boutique</title>
-    <link href="img/fav_icon.png" rel="icon">
+    <link href="<?php echo URL; ?>img/fav_icon.png" rel="icon">
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
   </head>
 
   <body>
