@@ -67,7 +67,7 @@ if(isset($_POST['pseudo']) && isset($_POST['mdp']) && isset($_POST['nom']) && is
   }
 
   // contrôle sur la disponibilité du pseudo
-  $dispo_pseudo = $pdo->prepare("SELECT * FROM memebre WHERE pseudo = :pseudo");
+  $dispo_pseudo = $pdo->prepare("SELECT * FROM membre WHERE pseudo = :pseudo");
   $dispo_pseudo->bindParam(":pseudo", $pseudo, PDO::PARAM_STR);
   $dispo_pseudo->execute();
 

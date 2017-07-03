@@ -31,8 +31,8 @@ require("inc/nav.inc.php");
         <div class="row">
             <div class="col-sm-8">
                 <h2><?php echo 'Bonjour ' . $_SESSION['utilisateur']['prenom'] . ' ' . $_SESSION['utilisateur']['nom'] . ' !' ?></h2>
-                <div class="col-sm-10" style="background: url('http://wallpapercave.com/wp/tqyeBQZ.jpg') top center /cover no-repeat; border-radius: 3px; border: 1px solid #AAA;">
-                    <h3 style="color: white;">Informations:</h3>
+                <div class="col-sm-10" style="border-radius: 3px; border: 1px solid #AAA;">
+                    <h3 style="color: black;">Informations:</h3>
                     <ul class="list-group">
                         <li class="list-group-item">Pseudo: <?php echo $_SESSION['utilisateur']['pseudo'] ?></li>
                         <li class="list-group-item">Nom: <?php echo $_SESSION['utilisateur']['nom'] ?></li>
@@ -45,7 +45,7 @@ require("inc/nav.inc.php");
                 </div>
             </div>
             <div class="col-sm-4">
-                <img src="img/marty_profil.gif" class="img-responsive img-rounded" alt="" style="margin-top: 20px; height: 368px; border: 1px solid #DDD;">
+                <!--<img src="img/marty_profil.gif" class="img-responsive img-rounded" alt="" style="margin-top: 20px; height: 368px; border: 1px solid #DDD;">-->
             </div>
         </div>
         <div class="row">

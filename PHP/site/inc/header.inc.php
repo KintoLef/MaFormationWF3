@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Moi">
 
-    <title>Ma Boutique</title>
+    <title>PopShop Marvel</title>
     <link href="<?php echo URL; ?>img/fav_icon.png" rel="icon">
 
     <!-- Bootstrap core CSS -->
@@ -16,6 +16,10 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
   </head>
 
-  <body>
+  <body style="background: url('<?php echo URL; ?>img/back3.jpg') top center /cover no-repeat;">

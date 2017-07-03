@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 27 Juin 2017 à 15:21
+-- Généré le :  Ven 30 Juin 2017 à 17:34
 -- Version du serveur :  10.1.21-MariaDB
 -- Version de PHP :  5.6.30
 
@@ -39,6 +39,21 @@ CREATE TABLE `article` (
   `prix` double(7,2) NOT NULL,
   `stock` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `article`
+--
+
+INSERT INTO `article` (`id_article`, `reference`, `categorie`, `titre`, `description`, `couleur`, `taille`, `sexe`, `photo`, `prix`, `stock`) VALUES
+(7, 5458, 'vetement', 'Débardeur Marvel', 'Débardeur Marvel Logo\r\nFemme', 'noir', 's', 'f', '5458_debardeur-marvel-femme.jpg', 20.00, 56),
+(8, 4894, 'vetement', 'T-Shirt Wolverine', 'T-shirt Wolverine\r\neffet métal\r\nhomme', 'noir', 'm', 'm', '4894_tsirht-wolverine.jpg', 22.00, 48),
+(9, 4263, 'vetement', 'T-Shirt Spider-Man', 'T-shirt Knicks Spider-man\r\nhomme', 'noir', 'l', 'm', '4263_marvel-knicks-noir.jpg', 30.00, 63),
+(10, 1563, 'vetement', 'Casquette Marvel', 'Casquette Marvel\r\nLogo Rouge\r\nUnisex\r\nTaille Unique', 'rouge', '', 'f', '1563_marvel-casquette-premium.jpg', 18.00, 27),
+(11, 6593, 'vetement', 'Vans Marvel', 'Vans Classic\r\nMarvel imprimé tissu', 'noir', 's', 'f', '6593_Vans-Marvel.jpg', 45.00, 23),
+(12, 459, 'goodies', 'Pop Captain America', 'Figurine Pop - Captain America\r\nbobble-head\r\n', '', '', '', '0459_pop_captain.jpg', 15.00, 22),
+(15, 684, 'goodies', 'Pop Spider-Man', 'Figurine Pop - Spider-man\r\nbobble-head\r\n', '', '', '', '0684_pop_spiderman.jpg', 15.00, 33),
+(16, 623, 'goodies', 'Pop Thor', 'Figurine Pop -Thor\r\nbobble-head\r\n', '', '', '', '0623_pop_thor.jpg', 15.00, 19),
+(17, 681, 'goodies', 'Pop Iron Fist', 'Figurine Pop -Iron Fist\r\nbobble-head\r\n', '', '', '', '0681_pop_ironfist.jpg', 15.00, 26);
 
 -- --------------------------------------------------------
 
@@ -89,6 +104,15 @@ CREATE TABLE `membre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Contenu de la table `membre`
+--
+
+INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `sexe`, `ville`, `cp`, `adresse`, `statut`) VALUES
+(1, 'admin', 'admin', 'Lefevre', 'Quentin', 'admin@gmail.com', 'm', 'Paris', 75004, '18 rue Geoffroy l\'Asnier', 1),
+(2, 'test', 'test', 'Poineau', 'Kevin', 'poineau@mail.fr', 'm', 'Ablis', 78660, '12 rue de l\'Eglise', 0),
+(3, 'MartyMcFly', 'backtofuture85', 'McFly', 'Martin', 'mcfly@gmail.com', 'm', 'Hill Valley', 850632, '', 0);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -130,7 +154,7 @@ ALTER TABLE `membre`
 -- AUTO_INCREMENT pour la table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id_article` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_article` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT pour la table `commande`
 --
@@ -145,7 +169,7 @@ ALTER TABLE `details_commande`
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `id_membre` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_membre` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Contraintes pour les tables exportées
 --
