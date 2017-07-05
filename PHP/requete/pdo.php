@@ -42,6 +42,9 @@ $pdo = new PDO('mysql:host=localhost;dbname=wf3_entreprise', 'root', '', array(P
 $resultat = $pdo -> exec("INSERT INTO employes (prenom, nom, sexe, service, salaire, date_embauche) VALUES ('Quentin', 'Lefevre', 'm', 'informatique', 3000, '2017-06-22')");
 echo 'nombre de lignes insérées par la dernière requête: ' . $resultat;
 
+// pour récupérer le dernier id inséré:
+// echo $pdo->lastInsertId();
+
 // 3. PDO: QUERY => SELECT + FETCH (pour un seul résultat)
 $resultat = $pdo -> query("SELECT * FROM employes WHERE id_employes=350");
 echo '<pre>'; var_dump($resultat); echo '</pre>';

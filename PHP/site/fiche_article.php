@@ -71,13 +71,15 @@ require("inc/nav.inc.php");
                 echo '</select><br>';
 
                 echo '<input type="submit" name="ajout_panier" value="Ajouter au Panier" class="form-control btn btn-primary" />';
-                echo '</form></div>';
+                echo '</form></div><br>';
             }
             else
             {
                 echo '<h3 class="text-danger">Rupture de stock pour ce produit !!</h3>';
             }
-                       
+			echo '<div class="col-sm-4 col-sm-offset-4">
+                    <a href="boutique.php?categorie=' . $article['categorie'] . '" class="btn btn-success form-control">Retour vers votre sélection</a>
+                  </div>';          
                         
 
         ?>

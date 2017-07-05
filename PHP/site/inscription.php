@@ -117,7 +117,7 @@ echo '<pre>'; print_r($_POST); echo '</pre>';
 
       <div class="row">
         <div class="col-sm-5 col-sm-offset-3">
-          <form class="form-horizontal" method="post" action="">
+          <form class="form-inline" method="post" action="">
             <div class="form-group">
               <label for="pseudo" class="col-sm-4 control-label">Pseudo</label>
               <div class="col-sm-8">
