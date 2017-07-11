@@ -1,0 +1,14 @@
+section {
+    min-height: 800px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+footer {
+    background: steelblue;
+    text-align: left;
+    color: white;
+}
