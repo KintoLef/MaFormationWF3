@@ -85,15 +85,15 @@ require("inc/head.inc.php");
             //     // première ligne du tableau pour le nom des colonnes
             //     echo '<tr>';
 
-            //         // récupération du nombre de colonnes dans la requête:
-            //         $nb_col = $info_film->columnCount();
+            //     // récupération du nombre de colonnes dans la requête:
+            //     $nb_col = $info_film->columnCount();
 
-            //         for($i=0; $i<$nb_col; $i++)
-            //         {
-            //             // echo '<pre>'; print_r($resultat->getColumnMeta($i)); echo '</pre>'; echo '<hr />';
-            //             $colonne = $info_film->getColumnMeta($i); // on récupère les informations de la colonne en cours afin ensuite de demander le name
-            //             echo '<th style="padding: 10px; text-align: center;">' . $colonne['name'] . '</th>';
-            //         }
+            //     for($i=0; $i<$nb_col; $i++)
+            //     {
+            //         // echo '<pre>'; print_r($resultat->getColumnMeta($i)); echo '</pre>'; echo '<hr />';
+            //         $colonne = $info_film->getColumnMeta($i); // on récupère les informations de la colonne en cours afin ensuite de demander le name
+            //         echo '<th style="padding: 10px; text-align: center;">' . $colonne['name'] . '</th>';
+            //     }
 
             //     echo '</tr>';
 

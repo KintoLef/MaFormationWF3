@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Info Text</title>
+</head>
+<body>
+    <div style="width: 50%; margin: 0 auto;">
+        <p id="demo" style="border: 1px solid; padding: 30px;">
+            ...
+        </p>
+        <button type="button" id="action">Changer contenu</button>
+    </div>
+    <script>
+        //On récupère l'élément action et on ajoute lors de l'évènement clic le déclenchement d'une fonction
+        document.getElementById("action").addEventListener("click", changerContenu);
+
+        function changerContenu() {
+            // alert("ok");
+            // Instanciation de l'objet XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+                console.log('Statut http: ' + xhttp.status); // statut http
+                console.log('Statut Ajax: ' + xhttp.readyState); // statut requête ajax
+                // Vérification si la réponse est prête
+                if(xhttp.readyState == 4 && xhttp.status == 200)                {
+                    // console.log(responseText)
+                    document.getElementById("demo").textContent = xhttp.responseText;
+                    // document.getElementById("demo").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", 'ajax_info_text.txt', true); // on prépare // 1er argument: la méthode, 2ème: le fichier cible, 3ème: Asynchrone (par défaut)
+            xhttp.send(); // envoie
+        }
+    </script>
+</body>
+</html>

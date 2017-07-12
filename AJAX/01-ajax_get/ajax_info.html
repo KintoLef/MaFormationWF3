@@ -1,0 +1,60 @@
+<!--
+    Référence pour l'objet XMLHttpRequest
+    https://msdn.microsoft.com/en-us/library/ms535874(v=vs.85).aspx
+    https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest
+
+    Les statuts de la requête XMLHttpRequest
+        - 0 => objet créé, demande non initialisée
+        - 1 => connexion avec le serveur établie
+        - 2 => demande envoyée et reçue par le serveur
+        - 3 => traitement côté serveur
+        - 4 => demande terminée et réponse reçue
+
+    Statuts HTTP:
+    https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP
+
+    "200" => "OK"
+    "403" => "Forbidden"
+    "404" => "Not Found"
+
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        h1 {padding: 10px; background-color: darkred; color: white; font-family: calibri;}
+    </style>
+    <title>Ajax Info</title>
+</head>
+<body>
+    <div id="demo">
+        <h1>Titre</h1>
+    </div>
+    <button type="button" id="action">Changer le titre</button>
+    <script>
+        //On récupère l'élément action et on ajoute lors de l'évènement clic le déclenchement d'une fonction
+        document.getElementById("action").addEventListener("click", changerTitre);
+
+        function changerTitre() {
+            // alert("ok");
+            // Instanciation de l'objet XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+                console.log('Statut http: ' + xhttp.status); // statut http
+                console.log('Statut Ajax: ' + xhttp.readyState); // statut requête ajax
+                // Vérification si la réponse est prête
+                if(xhttp.readyState == 4 && xhttp.status == 200)                {
+                    document.getElementById("demo").innerHTML = xhttp.responseText;
+                }
+            }
+            xhttp.open("GET", 'ajax_info.txt', true); // on prépare // 1er argument: la méthode, 2ème: le fichier cible, 3ème: Asynchrone (par défaut)
+            xhttp.send(); // envoie
+        }
+    </script>
+</body>
+</html>
