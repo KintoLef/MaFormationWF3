@@ -40,7 +40,7 @@ function ajax(){
         if(xhttp.readyState == 4 && xhttp.status == 200)
         {
             console.log(xhttp.responseText);
-            var connexion = JSON.parse(xhttp.responseText)
+            var connexion = JSON.parse(xhttp.responseText);
             // .resultat correspond à l'indice défini en php sur ajax.php                    
             document.getElementById('message').innerHTML = connexion.resultat;
 

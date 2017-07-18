@@ -42,18 +42,18 @@ border: 1px solid #c0c0c0;
 }
 #smiley img{ margin: 2px; }
 #formulaire_tchat{
-height: 130px;
+min-height: 150px;
 }
 textarea{
 float: left;
-width: 800px;
+width: 100%;
 height: 21px;
 resize: none;
 margin: 0 10px 0 0;
 padding: 2px;
 border: 1px solid #c0c0c0;
 }
-.submit{ float: left; background: #dbdbdb;  }
+.submit{ float: left; background: #dbdbdb;}
 .clear{ clear: both; }
 .bleu { color: #4e99e6; }
 .rose { color: #e86dbe; }
@@ -64,6 +64,6 @@ p{ margin: 0; }
 #liste_membre_connecte:hover{ cursor: default; }
 
 /* PAGE INDEX */
-#form{width: 40%; margin: 0 auto;}
+#form{width: 100%; margin: 0 auto;}
 #form input, #form select{width: 100%; min-height: 30px; border: 1px solid darkgray; border-radius: 3px;}
 fieldset{width: 40%; margin: 0 auto; min-width: 300px;}

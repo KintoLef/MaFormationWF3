@@ -189,10 +189,10 @@ echo '<pre>'; print_r($donnees); echo '</pre>';
 // BINDPARAM n'accepte que des valeurs sous forme de variable !!!
 
 // implode() & explode() (fonctions prédéfinies)
-// implode() permet d'afficher tous les éléments d'un tableau array séparés par un séparateur fourni en 2ème argument
-// explode() découpe une chaîne de caractères selon un séparateur fourni en deuxième argument et place chaque segment de cette chaîne dans un tableau array à des indices différents.
+// implode() permet d'afficher tous les éléments d'un tableau array séparés par un séparateur fourni en 1er argument
+// explode() découpe une chaîne de caractères selon un séparateur fourni en 1er argument et place chaque segment de cette chaîne dans un tableau array à des indices différents.
 // exemple:
-echo implode($donnees, '<br />');
+echo implode('<br />', $donnees);
 
 // 9. PDO: PREPARE + BINDVALUE + EXECUTE
 echo '<hr /><hr /><hr />';

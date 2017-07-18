@@ -2,7 +2,7 @@
 require_once('inc/init.inc.php');
 if(!empty($_SESSION['utilisateur']['pseudo']))
 {
-    header('location:dialogue.php');
+    // header('location:dialogue.php');
 }
 ?>
 <!DOCTYPE html>
@@ -44,6 +44,6 @@ if(!empty($_SESSION['utilisateur']['pseudo']))
                 </form>
             </fieldset>
         </div>
-        <script src="js/tchat.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
