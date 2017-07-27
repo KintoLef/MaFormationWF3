@@ -1,0 +1,45 @@
+Arborescence 
+	app/     : La configuration de notre application (parametrs de connexion à la BDD, parametres de sécu...)
+	src/     : Le PHP et l'HTML spécifique à notre application (Controleurs, vues, Models, Entités spécifiques à notre application)
+	vendor/  : Code général (Coeur de l'application... fonctionnalités génériques)
+	web/     : Repertoire web racine (index.php, img/, photo/, js/, fonts/, css/)
+	
+--------------------------------
+Nature des différents fichiers :
+	
+app/
+	Config/
+		parameters.php : Contient toutes les informations de connexion à la BDD et tous les autres parametres (secu) qui auraient été nécessaires.
+	Config.php : Contient une classe dont l'objectif est récupérer les parametres et de les "servir". Par exemple, il va apporter à PDOManager les informations de connexion à la BDD
+
+src/
+	Entity/
+		Produit.php, Membre.php, Commande.php : Ces classes contiennent toutes les propriétés des entités de notre application. Ces classes sont appelées des POPO (Plain Old PHP Object). Puisqu'on travaille en objet, il faut bien un plan de construction pour créer les objets Produit, Membre et Commande...
+		
+vendor/
+	autoload.php : L'autoload permet d'inclure les bons fichiers lors d'une instanciation. Cela nous évite d'avoir à faire de nombreux require(); 
+
+web/
+	index.php : (controller frontal) C'est la clé d'entrée de notre application (Symfony : app.php, ou app_dev.php // Silex : index.php). C'est à partir de là que le site se déploie. Dans notre application c'est ici que l'on va créer la session, et que nous instancierons la classe Application qui lancera l'exécution grâce à la méthode run(). 
+		
+		
+vendor/
+	Manager/
+		PDOManager.php : Cette classe représente la connexion à la BDD. Elle contient et nous retourne notre objet PDO grâce auquel nous pourrons effectuer des requêtes. 
+		Cette classe est un Singleton, cela signifie qu'il ne peut y avoir qu'un seul objet issu de cette classe. 
+		
+		
+	Model/
+		Model.php : Un model centralise tout ce qui touche à la BDD. Concrètement il ne devrait pas y avoir de requête ailleurs que dans un Model. 
+		Nous aurons autant de Models que d'entité (ArticleModel.php, MembreModel.php etc...) et Model.php
+		est la classe mère de tous les Models. Il effectue toutes les "taches" communes aux models (Récupérer une connexion à la BDD, faire des requêtes génériques...).
+		Model.php ne connait pas Article, Membre, Commande...
+		
+		
+		
+		
+		
+		
+		
+		
+
