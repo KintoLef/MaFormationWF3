@@ -1,0 +1,66 @@
+
+
+  <div class="container">
+      <div class="starter-template">
+        <h1><span class="glyphicon glyphicon-list" style="color: NavajoWhite;"></span> Fiche Article</h1>
+      </div>
+	  <div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+			  <div class="panel-heading" style="padding: 20px 210px;"><img src="img/logo-boutique.gif" class="img-responsive" /></div>
+			  <div class="panel-body">
+			  <div class="col-md-6" style="text-align: center;">
+				<img src="photo/<?= $article -> getPhoto() ?>"  class="img-responsive" />
+			  </div>
+			  <div class="col-md-6" style="text-align: left;">
+				
+					<h2><?=$article -> getTitre() ?></h2><hr />
+					<p><b class="label_fiche">Référence: </b><?=$article -> getReference() ?></p>
+					<p><b class="label_fiche">Catégorie: </b><?=$article -> getCategorie() ?></p><hr /><?= $article -> getPrix(); ?>€ </p>
+					<p><b class="label_fiche">Couleur: </b><?=$article -> getCouleur() ?></p>
+					<p><b class="label_fiche">Taille: </b><?=$article -> getTaille()?></p>
+					<p><b class="label_fiche">Sexe: </b><?= ($article -> getSexe() == 'm') ? 'Homme' : 'Femme' ?></p>
+					<hr />
+			
+			  </div>
+			  <div class="col-md-12">
+					<hr /><p><?=$article -> getDescription() ?></p>
+					<hr />
+					
+					<?php if( $article -> getStock() > 0 ) :?>
+					
+						<form method="post" action="panier.php">
+						<input type="hidden" name="id_article" value="<?=$article -> getId_article() ?>" />
+						<select name="quantite" class="form-control">
+						
+						<?php for($i = 1; $i <= $article -> getStock() && $i < 8; $i++): ?>
+							<option><?=$i ?></option> 
+						<?php  endfor; ?>
+						
+						</select><br />
+						
+						<input type="submit" name="ajout_panier" value="Ajouter au panier"  class="form-control btn btn-warning" />
+						
+						</form>
+					<?php else : ?>
+						<h3>Rupture de stock pour ce produit</h3>
+					<?php endif ?>
+					<hr />
+					<a href="" class="btn btn-success form-control">Retour vers votre sélection</a>
+			  </div>
+				
+			  </div>
+			</div>
+		</div>
+	  </div>
+	  
+
+    </div><!-- /.container -->
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 <?php
-// src/Model/ArticleModel.php
+
+//src/Model/ArticleModel.php
 
 namespace Model;
 
@@ -65,7 +66,36 @@ class ArticleModel extends Model
 	
 	}
 	
-	
+	// requete pour récupérer les resultats de recherche
+	public function findSearch($term){
+		$term = '%' . $term . '%';
+		
+		$requete="
+			SELECT *
+			FROM article
+			WHERE titre LIKE :valeur
+			OR description LIKE :valeur
+			OR categorie LIKE :valeur
+			OR couleur LIKE :valeur
+			OR taille LIKE :valeur
+		";
+		
+		$resultat = $this -> getDb() -> prepare($requete);
+		$resultat -> bindParam(':valeur', $term);
+		$resultat -> execute();
+		
+		$resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\Article');
+		
+		$donnees = $resultat -> fetchAll();
+		
+		if(!$donnees){
+			return FALSE;
+		}
+		else{
+			return $donnees;
+		}	
+		
+	}
 	
 	
 	

@@ -28,69 +28,87 @@ vendor/
 		PDOManager.php : Cette classe représente la connexion à la BDD. Elle contient et nous retourne notre objet PDO grâce auquel nous pourrons effectuer des requêtes. 
 		Cette classe est un Singleton, cela signifie qu'il ne peut y avoir qu'un seul objet issu de cette classe. 
 		
-	
+		
 	Model/
 		Model.php : Un model centralise tout ce qui touche à la BDD. Concrètement il ne devrait pas y avoir de requête ailleurs que dans un Model. 
 		Nous aurons autant de Models que d'entité (ArticleModel.php, MembreModel.php etc...) et Model.php
 		est la classe mère de tous les Models. Il effectue toutes les "taches" communes aux models (Récupérer une connexion à la BDD, faire des requêtes génériques...).
 		Model.php ne connait pas Article, Membre, Commande...
-
+		
 src/
 	Model/
-		ArticleModel.php: Ce fichier contiendra toutes les fonctions (requêtes) liées à l'entité produit et demandera à Model.php d'exécuter des requêtes génériques ! Si une entité a besoin de requêtes spécifiques (exemple: jointure) alors elles seront codées dans ce fichier.
-
+		ArticleModel.php : Ce fichier contiendra toutes les fonctions (requetes) liées à l'entité produit et demandera à Model.php d'éxécuter des requêtes génériques !
+		Si une entité a besoin de requêtes spécifiques (exemple : jointure) alors elles seront codées dans ce fichier.
+		
 vendor/
 	Controller/
-		Controller.php: C'est le controller général de l'application, il a pour objectif 2 missions:
-			1- Récupérer le bon Model en fonction de l'entité dans laquelle nous sommes (getModel()).
-			2- Afficher la bonne vue avec les variables nécéssaires à l'affichage (render()).
+		Controller.php : C'est le controleur général de l'application, il a pour objectif d'effectuer 2 missions : 
+			1/ Récupérer le bon Model en fonction de l'entité dans laquelle nous sommes (getModel())
+			2/ Afficher la bonne vue avec les variables nécessaire à l'affichage (render())
 
 src/
 	Controller/
-		ArticleController.php: Cette classe hérite du Controller général et permet de déclencher toutes las actions liées à l'entité Article.
-
+		ArticleController.php : Cette classe hérite du Controleur général de l'application, et permet de déclencher toutes les actions liées à l'entité article. 
+		
 src/
 	View/
 		Article/
-			boutique.php, fiche_article.php: On récupère les fichiers créés en procédural avec quelques modifications:
-				1- Header, nac et footer sont ré-incorporés (temporairement)
-				2- On retire tous les traitements PHP
-				3- Simplification du PHP à l'intérieur de l'HTML (formaes ternaires, et contractées)
-				4- On remplace l'appel aux array, par des objets (ex: $article[prix] devient $article -> getPrix())
-
+			boutique.php, fiche_article.php : On récupère les fichiers créés en procédural avec quelques modifications : 
+				1/ Header, nav et footer sont ré-incorporés (temporairement)
+				2/ On retire tous les traitements PHP
+				3/ Simplification du PHP à l'intérieur de l'HTML (formes ternaires, et contractées)
+				4/ On remplace l'appel aux array, par des objets 
+				exemple : $article['prix'] devient $article -> getPrix()
+				
 web/
-	css/, fonts/, js/, img/, photo/: On récupère les ressources (assets) du site en procédural. Toutes les vues du site feront appel à ces ressources directement via le nom du dossier et non plus avec <?php echo URL ?>
+	css/, fonts/, js/, img/, photo/  : On récupère les ressources (assets) du site en procédural. Toutes les vues du site feront appel à ces ressources directement via le nom du dossier et non plus avec <?php echo URL ?>
+		
 
 src/
 	View/
-		layout.html: Ce fichier représente la structure de base d'une page (header, nav, footer). Si nécéssaire il peut y avoir plusieurs layout (ex: la Home peut avoir une structure différente de la page Mentions légales).
-		Le contenu de chaque vue sera représenté dans les layouts par une variable ($content).
-
+		Layout.html : Ce fichier représente la structure de base d'une page (header, nav, footer). Si necessaire il peut y avoir plusieurs layout (exemple : la home peut avoir une structure très différente de la page mention-légales).
+		Le contenu de chaque vue sera représenté dans les layout par une variable ($content). 
+		
+		
 vendor/
 	Controller/
-		Controller.php: Ajout de la méthode render()
-			+ modification des contrôleurs
-			+ modification des vues en .html
-
+		Controller.php : Ajout de la méthode render() 
+		+ modification des controleurs
+		+ modification des vues en .html
+		
+vendor
 	Manager/
-		Application.php:C'est la classe qui est capable de lancer mon application. Elle va récupérer les informations dans l'URL (construct()), elle va instancier le bon controller, et lancer la bonne méthode (run()).
-			===> C'est mon 'interrupteur'.
-			+ modification de index.php
-			+ modification des liens du site
+		Application.php : C'est la classe qui est capable de lancer mon application. Elle va récupérer les informations dans l'URL (construct()) et elle va instancier le bon controller, et lancer la bonne méthode (run()). 
+		===> C'est mon "interrupteur". 
+		+ modification de index.php
+		+ modification des liens du sites
+		
 
-====> Ajout de fonctionnalités:
+===> Ajout de fonctionnalités :
 		- formulaire de recherche
 		- suggestions de produit
 		- connexion
 		- commentaires sur les articles
+		- Mentions-legale ??
+		- routes ? 
+		- mettre un site en ligne ? 
 
 
-		
-		
-		
-		
-		
-		
-		
-		
 
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
