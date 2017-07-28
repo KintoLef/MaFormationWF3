@@ -10,9 +10,9 @@
 				
 				<!-- DEBUT MENU CATEGORIES  -->
 				<ul class="list-group">
-					<li class="list-group-item"><a href="boutique.php">Tous les articles</a></li>
+					<li class="list-group-item"><a href="?controller=article&action=afficheAll">Tous les articles</a></li>
 					<?php foreach($categories as $categorie) : ?>
-						<li class="list-group-item"><a href="?categorie=<?= $categorie['categorie'] ?>"><?= $categorie['categorie'] ?></a></li>
+						<li class="list-group-item"><a href="?controller=article&action=categorie&cat=<?= $categorie -> getCategorie() ?>"</a></li>
 					<?php endforeach; ?>
 				</ul>
 				<!-- FIN MENU CATEGORIES  -->
